@@ -15,7 +15,7 @@ while True:
         if current_fen != previous_fen:
             print("Current FEN:", current_fen)
             board = chess.Board(current_fen)
-            result = engine.play(board, chess.engine.Limit(time=3.0))
+            result = engine.play(board, chess.engine.Limit(time=10.0))
             print("Best move:", result.move)
             make_move(str(result.move))
             previous_fen = current_fen
